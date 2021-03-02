@@ -1,5 +1,4 @@
 //PRIMO ESERCIZIO
-
 // INDICE EMAIL REGISTRATE
 var emailregistrate = ["claudio@claudio" , "raffa@raffa" , "alessandro@alessandro" , "fabrizio@fabrizio"]
 console.log(emailregistrate);
@@ -26,18 +25,14 @@ if (checkmail){
   document.getElementById('benvenuto').innerHTML = "Benvenuto, " + emailutente + checkmail;
 } else{
   var nuovamail = prompt("Non sei registrato,inserisci una nuova mail.")
+  //CREAZIONE NUOVA MAIL
+  emailregistrate.push(nuovamail);
+  console.log(emailregistrate);
+  // STAMPO IN HTML LA NUOVA MAIL
+  document.getElementById('benvenuto').innerHTML = "Benvenuto, " + emailutente + ", sei registrato nel nostro sistema.";
 }
 
-//CREAZIONE NUOVA MAIL
-emailregistrate.push(nuovamail);
-console.log(emailregistrate);
-
-// STAMPO IN HTML LA NUOVA MAIL
-document.getElementById('benvenuto').innerHTML = "Benvenuto, " + emailutente + ", sei registrato nel nostro sistema.";
-
-
 //SECONDO ESERCIZIO
-
 //GENERO NUMERO ALL'UTENTE
 var utente = Math.floor(Math.random() *6 + 1);
 console.log(utente);
