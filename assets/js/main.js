@@ -22,14 +22,18 @@ for (var i = 0; i < emailregistrate.length; i++) {
 if (checkmail){
   var checkmail = " , la tua mail è registrata"
   console.log("Ciao,la tua mail è registrata");
+  //STAMPO IN HTML IL MESSAGGIO DI AVVISO
+  document.getElementById('benvenuto').innerHTML = "Benvenuto, " + emailutente + checkmail;
 } else{
-  var checkmail = " , purtroppo, la tua mail non è registrata"
-  console.log("La tua mail non è registrata");
+  var nuovamail = prompt("Non sei registrato,inserisci una nuova mail.")
 }
 
-//STAMPO IN HTML IL MESSAGGIO DI AVVISO
-document.getElementById('benvenuto').innerHTML = "Benvenuto, " + emailutente + checkmail;
+//CREAZIONE NUOVA MAIL
+emailregistrate.push(nuovamail);
+console.log(emailregistrate);
 
+// STAMPO IN HTML LA NUOVA MAIL
+document.getElementById('benvenuto').innerHTML = "Benvenuto, " + emailutente + ", sei registrato nel nostro sistema.";
 
 
 //SECONDO ESERCIZIO
